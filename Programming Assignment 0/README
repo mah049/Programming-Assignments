@@ -1,0 +1,115 @@
+PA0 README---------------------------------------------
+
+Author: Mark Huang
+Userid: cs30xcl
+
+Date: January 13,2015
+
+Description:------------------------------------------
+PA0 is a program that prints out onto the 
+terminal window a message that says "Welcome to CSE 30,
+Winter 2015 , PA0 is due on January, 13 2015, and the
+square of a number inputted by the user.
+
+Compilation:-------------------------------------------
+To compile the program, type in the command make(the
+makefile specifies how to derive the target program)
+
+To run the program after typing in make, type in
+./a.out
+
+Sample Output:----------------------------------------
+Normal output...
+
+$./a.out 5
+
+	Welcome to CSE 30, Winter 2015
+	PA0 is due on January 13, 2015
+	The square of 5 is 25
+
+Abnormal output...
+
+$./a.out
+
+	./a.out: missing integer arg
+	Usage: ./a.out [INTEGER]
+	  Integer value to square
+
+$./a.out 10 3
+
+	./a.out: too many arguments
+	Usage: ./a.out [INTEGER]
+	  Integer value to square
+
+Questions:--------------------------------------------
+--1)error: implicit function declaration: fprintf line 53 of
+the file main.c
+	To fix, add #include <stdio.h> in main.c.
+  
+(20) error: syntax requires ";" after last struct/union member
+(20) error: syntax error before or at: unsigned
+(21) error: syntax requires ";" after last struct/union member
+(21) error: syntax error before or at: unsigned
+(22) error: syntax requires ";" after last struct/union member
+in the file pa0.h
+	To fix, simply add semi-colons after the member declarations
+	in pa0.h.
+
+(32) error: dubious tag declaration: struct DueDate
+(34) error: undefined struct/union member: month
+(34) error: undefined struct/union member: day
+(34) error: undefined struct/union member: year
+lint: errors in printDueDate.c; no output created
+in the file printDueDate.c
+	TO fix, add #include "pa0.h" in the file printDueDate.c.
+
+(87) error: argument #1 is incompatible with prototype:
+prototype: pointer to const struct DueDate {unsigned int year} : "pa0.h", 
+line 25 in the file main.c.
+	To fix, change the argument in printDueDate to &dueDate
+	in the file main.c
+
+main.c:93:3warning: format '%d' expects argument of type 'int', but
+arguemtn 2 has type 'char *' [-WFormat=]
+(void)printf( STR_SQUARENUM, argv[1], squareNum( argVal)); in the file
+main.c
+	To fix, add atoi(argv[1]) in the file main.c
+
+--2)The program was not printing the correct output after successful compilation
+because the EXPECTED_ARGS was not equal to the argc so the err message always
+ran. To fix it, I changed the EXPECTED_ARGS to 2.
+
+--3)int argVal=0;
+
+--4)--argVal;nexti executes "one machine instruction, and 
+if it is a function call
+proceeds until the function returns"; it shows 13
+
+--5)it examines the string. "Winter 2015" is printed
+
+--6)The breakpoint is at main. You set one by typing in break main. Or the line
+number you want to break in a particular file.
+
+--7)You are debugging the sethi function.
+
+--8)Step continues the program to the line before what is printed out on the gdb
+and next actually runs that line of code. Stepi and Nexti are different in that
+stepi "executes one machine instruction, then stop and return to the debugger."
+nexti "executes one machine function, and if it is a function call continues
+until the function returns."
+
+--9.$i0, $o0 refers to inside and outside parameters respectively.
+
+--10)X shows you the contents of a memory address whereas p shows you the value
+stored in a named variable. You should use x to look at 
+the contents of a register.
+You should use p to look at something in memory.Examine a string and print 
+variable as a signed integer, respectively.
+
+--11) git rm --cached
+
+--12)git log
+
+--13)put *.whatever you don't want or filenames in .gitignore
+
+--14).git

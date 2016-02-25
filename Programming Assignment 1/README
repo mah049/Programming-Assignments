@@ -1,0 +1,147 @@
+PA1` README---------------------------------------------
+
+Author: Mark Huang
+Userid: cs30xcl
+
+Date: January 27,2015
+
+Description:------------------------------------------
+PA1 is a program that displays a plus using the 4
+parameters of size, plusbhar,borderchar, and fill char.
+The size will be how large the plus is and the border char
+is the character that fills up the borderspace
+and the fill char in between and plus char is the plus char
+Compilation:-------------------------------------------
+To compile the program, type in the command make(the
+makefile specifies how to derive the target program)
+
+To run the program after typing in make, type in
+./pa1 and add 4 parameters within the values specified
+
+Sample Output:----------------------------------------
+Normal output...
+
+./pa1 9 33 34 35
+###########
+#""""!""""#
+#""""!""""#
+#""""!""""#
+#""""!""""#
+#!!!!!!!!!#
+#""""!""""#
+#""""!""""#
+#""""!""""#
+#""""!""""#
+###########
+
+Abnormal output:
+
+./pa1 5 33 34
+    Usage: ./pa1 size plus_char fill_char border_char
+    size        (must be within the range of [3-5001])
+                (must be odd)
+    plus_char   (must be an ASCII value within the range of [32-126])
+                (must be different than fill_char and border_char)
+    fill_char   (must be an ASCII value within the range of [32-126])
+                (must be different than plus_char and border_char)
+    border_char (must be an ASCII value within the range of [32-126])
+                (must be different than plus_char and fill_char)
+
+./pa1 9 33a cd34 ljlk
+"33a" is not an integer
+
+"cd34" is not an integer
+
+"ljlk" is not an integer
+
+Usage: ./pa1 size plus_char fill_char border_char
+    size        (must be within the range of [3-5001])
+                (must be odd)
+    plus_char   (must be an ASCII value within the range of [32-126])
+                (must be different than fill_char and border_char)
+    fill_char   (must be an ASCII value within the range of [32-126])
+                (must be different than plus_char and border_char)
+    border_char (must be an ASCII value within the range of [32-126])
+                (must be different than plus_char and fill_char)
+
+./pa1 8 33 34 35
+size (8) must be odd
+
+Usage: ./pa1 size plus_char fill_char border_char
+    size        (must be within the range of [3-5001])
+                (must be odd)
+    plus_char   (must be an ASCII value within the range of [32-126])
+                (must be different than fill_char and border_char)
+    fill_char   (must be an ASCII value within the range of [32-126])
+                (must be different than plus_char and border_char)
+    border_char (must be an ASCII value within the range of [32-126])
+                (must be different than plus_char and fill_char)
+
+./pa1 2 33 31 2000
+size (2) must be odd
+
+size (2) must be within the range [3-5001]
+
+fill_char (31) must be within the range [32-126]
+
+border_char (2000) must be within the range [32-126]
+
+Usage: ./pa1 size plus_char fill_char border_char
+    size        (must be within the range of [3-5001])
+                (must be odd)
+    plus_char   (must be an ASCII value within the range of [32-126])
+                (must be different than fill_char and border_char)
+    fill_char   (must be an ASCII value within the range of [32-126])
+                (must be different than plus_char and border_char)
+    border_char (must be an ASCII value within the range of [32-126])
+                (must be different than plus_char and fill_char)
+
+
+./pa1 9 33 33 33
+plus_char (33) and fill_char (33) must be different
+
+plus_char (33) and border_char (33) must be different
+
+fill_char (33) and border_char (33) must be different
+
+Usage: ./pa1 size plus_char fill_char border_char
+    size        (must be within the range of [3-5001])
+                (must be odd)
+    plus_char   (must be an ASCII value within the range of [32-126])
+                (must be different than fill_char and border_char)
+    fill_char   (must be an ASCII value within the range of [32-126])
+                (must be different than plus_char and border_char)
+    border_char (must be an ASCII value within the range of [32-126])
+                (must be different than plus_char and fill_char)
+------------------------------------------------------------------------
+QUESTIONS:
+--1.(gdb)p/x $i0
+$1=0xffbff20e
+(gdb)x/s 0xffbff20e
+0xffbff20e:     "9InchNails"
+(gdb)
+
+--2.(gdb)p/x $i2
+$2=0xa
+(gdb) p 0xa
+$3=10
+
+--3.(gdb)p/x $i1
+$4 = 0xffbfef50
+
+--4.a) p/d arg1
+b) p/d $o0
+
+--5.(gdb) x/c endptr
+
+--6.p/s endptr
+
+--7. p/d errno
+
+--8.git status
+
+--9. 'git reset HEAD <file>'
+
+--10.git diff HEAD
+
+

@@ -1,0 +1,63 @@
+PA3 README-----------------------------------------------------------
+
+Author:Mark Huang
+Userid: cs30xcl
+
+Date: February 24,2015
+
+Description:--------------------------------------------------------
+PA3 is a program that takes in user inputted strings to find
+anagrams in a file. This is accomplished using struct anagramInfo 
+which contains dyndamically alloated array of sorted struct anagram 
+objects struct anagram matches which contains info on word entered 
+pointers to anagrams and the struct aangram which contains 
+the word and sorted word.
+
+Anagrams are words such that when lowercased they are the same. 
+Anagrams does not count words that are exactly the same.
+
+
+Compilation:------------------------------------------------------
+To compile the program, type in the command make(themakefile
+specifies how to derive the target program)
+
+How to Run:-------------------------------------------------------
+To run the program after typing in make, type in 
+./anagrams and add 1 argument which is the file you want 
+to search through for anagrams
+
+Sample Output:----------------------------------------------------
+Normal output.....
+
+./anagrams four_anagrams.txt 
+
+Enter a word to search for anagrams [^D to exit]: post
+
+Anagram(s) are: spot stop tops
+
+Enter a word to search for anagrams [^D to exit]:
+
+
+Abnormal output.....
+
+./anagrams abc
+makeAnagramTable failed: No such file or directory
+
+Usage: ./anagrams dictionary_file
+
+./anagrams
+
+Usage: ./anagrams dictionary_file
+
+How I Tested---------------------------------------------------------
+To test this file, I entered in all the values given in the writeup
+and see if it matched the output. i.e. ./anagrams four_anagrams.txt
+./anagrams, ./anagrams abc
+
+Additionally, I created tests that accounted for a variety of
+different capitalized and anagram words inside the file. For instance,
+HELLO hello Hello HElLo and determined if there were any edge cases 
+I needed to test and to make sure it correctly returned anagrams
+that were case=insensitive but also could not be the same word.
+
+---------------------------------------------------------------------
